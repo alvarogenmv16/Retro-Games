@@ -16,10 +16,10 @@ class Player(pygame.sprite.Sprite):
             self.rect.x += self.speed
 
     def constraint(self):
-        if self.rect.x <0:
-            self.rect.x = 0
-        elif self.rect.x > self.max_x - self.rect.width:
-            self.rect.x = self.max_x - self.rect.width
+        if self.rect.left <= 0:
+            self.rect.left = 0
+        elif self.rect.right >= self.max_x:
+            self.rect.right = self.max_x
 
     def update(self):
         self.get_player_input()
