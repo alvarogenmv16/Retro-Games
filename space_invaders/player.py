@@ -1,12 +1,12 @@
 import pygame
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, pos, max_x):
+    def __init__(self, pos, max_x, speed):
         super().__init__()
         self.image = pygame.image.load('../Graphics/player.png').convert_alpha()
         self.rect = self.image.get_rect(midbottom = pos)
-        self.speed = 5
         self.max_x = max_x
+        self.speed = speed
 
     def get_player_input(self):
         keys = pygame.key.get_pressed()
