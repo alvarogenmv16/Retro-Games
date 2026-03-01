@@ -38,7 +38,7 @@ class Player(pygame.sprite.Sprite):
             self.rect.right = self.max_x
 
     def shoot_laser(self):
-        self.laser.add(Laser(self.rect.center))
+        self.laser.add(Laser(self.rect.center, 8, self.rect.bottom))
 
     def update(self):
         self.get_player_input()
