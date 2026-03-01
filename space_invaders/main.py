@@ -9,6 +9,8 @@ class Game:
     def run(self):
         self.player.update()
         self.player.draw(screen)
+        self.player.sprite.laser.draw(screen)
+        self.player.sprite.laser.update()
         # Update all sprites
 
 # pygame setup
